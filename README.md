@@ -197,24 +197,51 @@ _Figura 4: tela de Login do Databricks Community Edition_
 
 Digite o seu e-mail e sua senha para acessar a plataforma do Databricks Community Edition.
 
-Se você não possuir uma conta, crie uma cliando em **Sign Up**.
+Se você não possuir uma conta, crie uma cliando em **Sign Up** e preenchar o formulário com seus dados conforme tela que segue:
+
+![image](https://github.com/user-attachments/assets/28381bf5-7fd2-487d-9c95-20df8a19b62b)
+_Figura 5: tela de cadastro no Databricks Community Edition_
+**Observação:** a utilização do Databricks Community Edition é gratuita, até o momento da redação deste artigo.
+
+![image](https://github.com/user-attachments/assets/8e016176-7805-4bbd-8743-f01f5b3fa836)
+_Figura 6: tela de escolha do Databricks Community Edition_
+Nesta etapa, clique na opção destacada em vermelho acima: **Get started with Community Edition.**
+
+![image](https://github.com/user-attachments/assets/c736d25a-ce1d-4b16-baf0-767b0d9a0329)
+_Figura 7: resolva o quebra-cabeças para ter acesso à sua conta do Databricks Community Edition.
 
 ![image](https://github.com/user-attachments/assets/c447d3c3-de27-4c72-a917-4599b4df9de3)
-_Figura 5: tela inicial do painel administrativo do Databricks Community Edition_
+_Figura 8: tela inicial do painel administrativo do Databricks Community Edition_
 
 Após login no painel administratitvo do Databricks Community Edition, clique em **Compute** no menu lateral esquerdo. Obs.: o mesmo pode estar colapsado, acaso necessário, clique em **Expand Menu**.
 
 ![image](https://github.com/user-attachments/assets/71ab75a0-382e-42c2-9c37-c91f709ac0c2)
 
-_Figura 6: tela do Menu Compute_
+_Figura 9: tela do Menu Compute_
 
 Clique em **Create Compute**.
 
 ![image](https://github.com/user-attachments/assets/e729ca9a-bb13-45da-9932-9612e03c110c)
-_Figura 7: tela Create Compute/Cluster_
+_Figura 10: tela Create Compute/Cluster_
 
 Nesta seção: dê um nome para seu compute.
 Databricks runtime version: escolha a versão **Runtime 14.3 LTS (Scala 2.12, Spark 3.5.0)** ou superior.
 Ao final, clique em **CREATE COMPUTE** e aguarde o cluster inicializar e ficar operacional.
+
+![image](https://github.com/user-attachments/assets/bd0197e7-23e3-4612-8dfc-3d0e943abc71)
+_Figura 11: workspace com os noteboks criados_
+
+No Menu Lateral Direito, clique em **1 - Workspace -> 2- Workspace -> 3 - Useres -> 4 enviar os arquivos para o Workspace**. 
+
+Após enviar os **"notebooks.dbc"** para o Workspace do Databricks, execute os notebooks em ordem pelas 3 primeiras letras, ex.: **nt1..., nt2..., nt3...**, ou execute o notebook que dispara todos os outros notebooks, qual seja, **nt0_executar_notebooks_em_cadeia**.
+
+![image](https://github.com/user-attachments/assets/8abca8a7-53c8-4ad7-bc14-6144c248a988)
+_Figura 12: notebook nt0_executar_notebooks_em_cadeia_
+
+
+
+
+
+
 
 
