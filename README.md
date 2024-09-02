@@ -122,6 +122,9 @@ A segurança dos dados durante o processo de ETL (Extração, Transformação e 
 
 Embora o Databricks Community Edition ofereça uma plataforma poderosa para aprendizado e prototipagem, ele possui limitações em termos de funcionalidades de segurança, devido à sua natureza gratuita. Isso significa que algumas das medidas de segurança avançadas disponíveis em ambientes empresariais não estão presentes. No entanto, se estivéssemos desenvolvendo o Data Lake em um ambiente mais robusto, como a **Microsoft Azure**, poderíamos implementar as seguintes medidas de segurança:
 
+![arquitetura-azure-databricks](https://github.com/user-attachments/assets/67928b1a-604f-444e-8b3c-8170a5896a32)
+_Figura 4: Proposta de Arquitetura utilizando Azure Databricks_
+
 - **VPN (Virtual Private Network)**: Utilização de VPNs para garantir que o tráfego de dados entre os usuários e a infraestrutura do Databricks seja seguro, reduzindo a exposição a ameaças externas.
 
 - **Azure Defender for Cloud**: Implementação do Azure Defender para monitorar e proteger a infraestrutura de dados contra ameaças potenciais, fornecendo proteção contínua para os recursos armazenados na nuvem.
@@ -138,8 +141,8 @@ Essas medidas de segurança seriam fundamentais para proteger os dados em um amb
 
 ---
 
-## 6. Estratégia de Monitoramento:
-#### 6.1 Estratégia de Monitoramento para o Pipeline de ETL
+## 5. Estratégia de Monitoramento:
+#### 5.1 Estratégia de Monitoramento para o Pipeline de ETL
 
 **Observação:** Devido a severas limitações do Databricks Community Edition, faço aqui uma reflexão se estivéssemos utilizando um Data Lake na Azure, AWS e/ou GCP.
 
@@ -155,7 +158,7 @@ O monitoramento eficaz de um pipeline de ETL (Extração, Transformação e Carg
 
 - **Verificação de Qualidade de Dados**: Implementação de verificações de qualidade em cada etapa do pipeline, assegurando que os dados sejam consistentes, completos e livres de erros antes de avançarem para as próximas fases do processo.
 
-#### 6.2 Métricas Chave a Serem Monitoradas e Ferramentas Utilizadas
+#### 5.2 Métricas Chave a Serem Monitoradas e Ferramentas Utilizadas
 
 Identificar as métricas chave e utilizar as ferramentas adequadas para monitoramento é fundamental para garantir a eficiência e eficácia do pipeline de ETL. As principais métricas e ferramentas incluem:
 
@@ -178,9 +181,9 @@ A combinação dessas métricas e ferramentas assegura um monitoramento abrangen
 
 ---
 
-## 7. Execução e utilização da Arquitetura e Scripts elaborados neste Desafio
+## 6. Execução e utilização da Arquitetura e Scripts elaborados neste Desafio
 
-### 7.1 Dos equipamentos e softwares necessários para execução do trabalho realizado 
+### 6.1 Dos equipamentos e softwares necessários para execução do trabalho realizado 
 1. É necessário possuir um computador com acesso à internet;
 2. É necessário ter uma conta no Databricks Community Edition;
 3. Logar na plataforma do Databricks Community Edition;
@@ -189,54 +192,54 @@ A combinação dessas métricas e ferramentas assegura um monitoramento abrangen
 6. Executar os notebooks seguindo a ordem sequencial **nt1..., nt2..., nt3...**;
    6.1 Outra alternativa mais rápida é executar o seguinte notebook: **nt_executar_notebooks_em_cadeia**
 
-### 7.2 Passo a passo de como executar o ETL proposto:
+### 6.2 Passo a passo de como executar o ETL proposto:
 
 Acessar a página de Login do Databricks Community Edition disponível em: https://community.cloud.databricks.com/login.html
 ![image](https://github.com/user-attachments/assets/0a587b70-f26d-44b3-ad09-53c2caf786a4)
-_Figura 4: tela de Login do Databricks Community Edition_
+_Figura 5: tela de Login do Databricks Community Edition_
 
 Digite o seu e-mail e sua senha para acessar a plataforma do Databricks Community Edition.
 
 Se você não possuir uma conta, crie uma cliando em **Sign Up** e preenchar o formulário com seus dados conforme tela que segue:
 
 ![image](https://github.com/user-attachments/assets/28381bf5-7fd2-487d-9c95-20df8a19b62b)
-_Figura 5: tela de cadastro no Databricks Community Edition_
+_Figura 6: tela de cadastro no Databricks Community Edition_
 **Observação:** a utilização do Databricks Community Edition é gratuita, até o momento da redação deste artigo.
 
 ![image](https://github.com/user-attachments/assets/8e016176-7805-4bbd-8743-f01f5b3fa836)
-_Figura 6: tela de escolha do Databricks Community Edition_
+_Figura 7: tela de escolha do Databricks Community Edition_
 Nesta etapa, clique na opção destacada em vermelho acima: **Get started with Community Edition.**
 
 ![image](https://github.com/user-attachments/assets/c736d25a-ce1d-4b16-baf0-767b0d9a0329)
-_Figura 7: resolva o quebra-cabeças para ter acesso à sua conta do Databricks Community Edition.
+_Figura 8: resolva o quebra-cabeças para ter acesso à sua conta do Databricks Community Edition.
 
 ![image](https://github.com/user-attachments/assets/c447d3c3-de27-4c72-a917-4599b4df9de3)
-_Figura 8: tela inicial do painel administrativo do Databricks Community Edition_
+_Figura 9: tela inicial do painel administrativo do Databricks Community Edition_
 
 Após login no painel administratitvo do Databricks Community Edition, clique em **Compute** no menu lateral esquerdo. Obs.: o mesmo pode estar colapsado, acaso necessário, clique em **Expand Menu**.
 
 ![image](https://github.com/user-attachments/assets/71ab75a0-382e-42c2-9c37-c91f709ac0c2)
 
-_Figura 9: tela do Menu Compute_
+_Figura 10: tela do Menu Compute_
 
 Clique em **Create Compute**.
 
 ![image](https://github.com/user-attachments/assets/e729ca9a-bb13-45da-9932-9612e03c110c)
-_Figura 10: tela Create Compute/Cluster_
+_Figura 11: tela Create Compute/Cluster_
 
 Nesta seção: dê um nome para seu compute.
 Databricks runtime version: escolha a versão **Runtime 14.3 LTS (Scala 2.12, Spark 3.5.0)** ou superior.
 Ao final, clique em **CREATE COMPUTE** e aguarde o cluster inicializar e ficar operacional.
 
 ![image](https://github.com/user-attachments/assets/bd0197e7-23e3-4612-8dfc-3d0e943abc71)
-_Figura 11: workspace com os noteboks criados_
+_Figura 12: workspace com os noteboks criados_
 
 No Menu Lateral Direito, clique em **1 - Workspace -> 2- Workspace -> 3 - Useres -> 4 enviar os arquivos para o Workspace**. 
 
 Após enviar os **"notebooks.dbc"** para o Workspace do Databricks, execute os notebooks em ordem pelas 3 primeiras letras, ex.: **nt1..., nt2..., nt3...**, ou execute o notebook que dispara todos os outros notebooks, qual seja, **nt0_executar_notebooks_em_cadeia**.
 
 ![image](https://github.com/user-attachments/assets/8abca8a7-53c8-4ad7-bc14-6144c248a988)
-_Figura 12: notebook nt0_executar_notebooks_em_cadeia_
+_Figura 13: notebook nt0_executar_notebooks_em_cadeia_
 
 
 
